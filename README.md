@@ -1,37 +1,3 @@
-Great — you’re **exactly at the right page now**. I’ll guide you **step-by-step from this screen to a complete professional GitHub project** using your provided content.
-
----
-
-# 🚀 WHAT TO DO NOW (FROM CURRENT PAGE)
-
-You are seeing:
-
-* Repository name ✅
-* Description ✅
-* Empty repo with README
-
-Now follow these steps carefully 👇
-
----
-
-# ✏️ STEP 1: EDIT README (MAIN PROJECT PAGE)
-
-### 👉 Click:
-
-**README.md → ✏️ Edit (pencil icon)**
-
----
-
-## 🔽 STEP 2: REPLACE CONTENT
-
-1. Delete everything inside README
-2. Copy-paste the **FULL content below (clean GitHub formatted)**
-
----
-
-# 📄 ✅ FINAL README (COPY-PASTE THIS)
-
-````markdown
 # 🧬 Molecular Docking-Based Comparative Analysis of Marrubiin Against Cardiovascular Protein Targets
 
 ## 📌 Title Justification
