@@ -1,6 +1,6 @@
-# 🧬 Molecular Docking-Based Comparative Analysis of Marrubiin Against Cardiovascular Protein Targets
+#  Molecular Docking-Based Comparative Analysis of Marrubiin Against Cardiovascular Protein Targets
 
-## 📌 Title Justification
+##  Title Justification
 - Molecular Docking-Based → Core computational method (AutoDock Vina)  
 - Comparative Analysis → Multiple protein targets evaluated  
 - Marrubiin → Ligand under investigation  
@@ -13,7 +13,7 @@ This project presents a systematic in silico molecular docking study evaluating 
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 - Evaluate binding affinity (kcal/mol)
 - Identify most stable protein–ligand complex
 - Analyze protein–ligand interactions
@@ -22,7 +22,7 @@ This project presents a systematic in silico molecular docking study evaluating 
 
 ---
 
-## 🧰 Tools & Resources
+##  Tools & Resources
 
 | Category | Tool |
 |--------|------|
@@ -58,7 +58,7 @@ Format: SDF (3D)
 
 ---
 
-## ⚙️ Methodology
+##  Methodology
 
 ### Step 1: Protein Preparation
 ```bash
@@ -191,7 +191,7 @@ save complexes/complex_XXXX.pdb
 
 ---
 
-## 🔍 Analysis
+##  Analysis
 
 * Best affinity: 1NIW
 * Most stable: 1NIW
@@ -203,7 +203,7 @@ save complexes/complex_XXXX.pdb
 
 ---
 
-## 💬 Discussion
+##  Discussion
 
 * 1NIW: Hydrophobic + salt bridge stabilization
 * 2R4S: Strong hydrogen bonding + electrostatic interactions
@@ -221,7 +221,13 @@ save complexes/complex_XXXX.pdb
 
 ---
 
-## 🏁 Conclusion
+##  Conclusion
 
 1NIW shows the best docking performance with stable binding and favorable interaction profile. Other complexes exhibit strong interactions but limited drug-likeness.
 
+---
+## 👩‍🔬 Author Contribution
+
+This molecular docking study, including protein and ligand preparation, docking execution, visualization, and interaction analysis, was independently performed by **Riya Kundu** as part of a bioinformatics research project.
+
+All computational workflows were designed, executed, and interpreted by the author using standard molecular docking protocols and tools.
