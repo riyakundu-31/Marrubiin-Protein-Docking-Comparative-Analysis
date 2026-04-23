@@ -1,0 +1,14 @@
+receptor = protein_2R4S_clean_model1.pdbqt
+ligand = ligand_marrubiin.pdbqt
+
+center_x = 69.09
+center_y = 52.454
+center_z = 31.752
+
+size_x = 120
+size_y = 120
+size_z = 120
+
+exhaustiveness = 8
+num_modes = 9
+energy_range = 4
