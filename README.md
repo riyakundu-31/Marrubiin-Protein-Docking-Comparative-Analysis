@@ -1,15 +1,15 @@
 #  Molecular Docking-Based Comparative Analysis of Marrubiin Against Cardiovascular Protein Targets
 
 ##  Title Justification
-- Molecular Docking-Based → Core computational method (AutoDock Vina)  
-- Comparative Analysis → Multiple protein targets evaluated  
-- Marrubiin → Ligand under investigation  
-- Cardiovascular Protein Targets → Biological relevance  
+1. Molecular Docking-Based → Core computational method (AutoDock Vina)  
+2. Comparative Analysis → Multiple protein targets evaluated  
+3. Marrubiin → Ligand under investigation  
+4. Cardiovascular Protein Targets → Biological relevance  
 
 ---
 
 ## 📖 Project Overview
-This project presents a systematic in silico molecular docking study evaluating the interaction of Marrubiin with selected protein targets.The workflow includes:
+This project presents a systematic in silico molecular docking study evaluating the interaction of Marrubiin with selected protein targets. The workflow includes:
 
 1. Structure retrieval
 2. Protein and ligand preparation
@@ -67,13 +67,16 @@ Format: SDF (3D)
 ##  Methodology
 
 ### Step 1: Protein Preparation (ChimeraX)
+
+Load protein (.pdb)
+
 ```bash
 delete solvent
 delete ions
 delete ligand
 ````
-
-Save:
+Add hydrogens via GUI (default settings)
+Save as:
 
 ```bash
 protein_clean_XXXX.pdb
@@ -82,6 +85,11 @@ protein_clean_XXXX.pdb
 ---
 
 ### Step 2: Ligand Preparation (ChimeraX)
+
+Load ligand (.sdf)
+Add hydrogens
+Perform energy minimization
+Save as:
 
 ```bash
 ligand.pdb
@@ -154,7 +162,7 @@ C:\CVina\vina.exe --config config_2R4S.txt --out output2R4S.pdbqt
 
 ---
 
-### Step 6: Visualization (PyMOL)
+### Step 7: Visualization (PyMOL)
 
 ```bash
 load protein_XXXX_clean.pdbqt
@@ -182,7 +190,7 @@ png images/docking_XXXX.png, dpi=300
 
 ---
 
-### Step 7: Complex Creation (for PLIP Analysis)
+### Step 8: Complex Creation (for PLIP Analysis)
 
 ```bash
 create complex_XXXX, protein_XXXX_clean or outputXXXX_0001
@@ -191,7 +199,7 @@ save complexes/complex_XXXX.pdb
 
 ---
 
-### Step 8: Interaction Analysis (PLIP)
+### Step 9: Interaction Analysis (PLIP)
 
 Access:
 [https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index](https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index)
@@ -242,15 +250,15 @@ Output:
 
 ##  Discussion
 
-* 1NIW
+##  1NIW
 1. Strong hydrophobic interactions and salt bridge
 2. Stable and energetically favorable
-* 2R4S
+##  2R4S
 1. Highest hydrogen bonding and electrostatic interactions
 2. Strong interaction network
-* 2R4R
+##  2R4R
 1. Balanced hydrogen bonding and hydrophobic interactions
-* 1GQ4
+##  1GQ4
 1. Strong hydrogen bonding but weak affinity and high variability
 ---
 
@@ -268,7 +276,7 @@ Output:
 1NIW shows the best docking performance with stable binding and favorable interaction profile. Other complexes exhibit strong interactions but limited drug-likeness.
 
 ---
-## 👩‍🔬 Author Contribution
+##  Author Contribution
 
 This molecular docking study, including protein and ligand preparation, docking execution, visualization, and interaction analysis, was independently performed by **Riya Kundu** as part of a bioinformatics research project.
 
