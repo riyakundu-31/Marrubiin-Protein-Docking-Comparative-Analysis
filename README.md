@@ -21,8 +21,8 @@ This project presents a systematic in silico molecular docking study evaluating 
 
 ##  Objectives
 1. Evaluate binding affinity (kcal/mol)
-2. Identify most stable protein–ligand complex
-3. Analyze protein–ligand interactions
+2. Identify most stable protein-ligand complex
+3. Analyze protein-ligand interactions
 4. Compare docking results across targets
 5. Assess drug-likeness suitability
 
@@ -76,6 +76,7 @@ delete ions
 delete ligand
 ````
 Add hydrogens via GUI (default settings)
+
 Save as:
 
 ```bash
@@ -89,6 +90,7 @@ protein_clean_XXXX.pdb
 Load ligand (.sdf)
 Add hydrogens
 Perform energy minimization
+
 Save as:
 
 ```bash
