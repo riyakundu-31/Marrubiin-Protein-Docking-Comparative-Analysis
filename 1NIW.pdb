@@ -22,7 +22,8 @@ SOURCE   6 EXPRESSION_SYSTEM_TAXID: 562;
 SOURCE   7 EXPRESSION_SYSTEM_STRAIN: B834(DE3);                                 
 SOURCE   8 EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              
 SOURCE   9 EXPRESSION_SYSTEM_PLASMID: PET9A;                                    
-SOURCE  10 MOL_ID: 2;                                                           
+SOURCE  10 MOL_ID: 2;     
+
 SOURCE  11 SYNTHETIC: YES;                                                      
 SOURCE  12 OTHER_DETAILS: THE PEPTIDE WAS CHEMICALLY SYNTHESIZED. THE SEQUENCE  
 SOURCE  13 OF THE PEPTIDE OCCURS NATURALLY IN HOMO SAPIENS (HUMAN).             
