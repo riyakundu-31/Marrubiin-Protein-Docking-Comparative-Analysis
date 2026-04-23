@@ -9,16 +9,22 @@
 ---
 
 ## 📖 Project Overview
-This project presents a systematic in silico molecular docking study evaluating the interaction of Marrubiin with selected protein targets. The workflow includes structure preparation, docking simulation, and interaction analysis.
+This project presents a systematic in silico molecular docking study evaluating the interaction of Marrubiin with selected protein targets.The workflow includes:
+
+1. Structure retrieval
+2. Protein and ligand preparation
+3. Molecular docking
+4. Binding affinity comparison
+5. Protein–ligand interaction analysis
 
 ---
 
 ##  Objectives
-- Evaluate binding affinity (kcal/mol)
-- Identify most stable protein–ligand complex
-- Analyze protein–ligand interactions
-- Compare docking results across targets
-- Assess drug-likeness suitability
+1. Evaluate binding affinity (kcal/mol)
+2. Identify most stable protein–ligand complex
+3. Analyze protein–ligand interactions
+4. Compare docking results across targets
+5. Assess drug-likeness suitability
 
 ---
 
@@ -60,7 +66,7 @@ Format: SDF (3D)
 
 ##  Methodology
 
-### Step 1: Protein Preparation
+### Step 1: Protein Preparation (ChimeraX)
 ```bash
 delete solvent
 delete ions
@@ -75,7 +81,7 @@ protein_clean_XXXX.pdb
 
 ---
 
-### Step 2: Ligand Preparation
+### Step 2: Ligand Preparation (ChimeraX)
 
 ```bash
 ligand.pdb
@@ -83,7 +89,7 @@ ligand.pdb
 
 ---
 
-### Step 3: PDBQT Conversion
+### Step 3: PDBQT Conversion (AutoDock Tools)
 
 Protein:
 
@@ -103,7 +109,9 @@ Detect Rotatable Bonds
 
 ---
 
-### Step 4: Grid Setup
+### Step 4: Grid Box Configuration (AutoDock Tools)
+
+Docking approach: Blind Docking
 
 | Parameter      | Value        |
 | -------------- | ------------ |
@@ -113,7 +121,29 @@ Detect Rotatable Bonds
 
 ---
 
-### Step 5: Docking
+### Step 5: Configuration File
+
+Example:
+
+```bash
+receptor = protein_1NIW_clean.pdbqt
+ligand = ligand_marrubiin.pdbqt
+
+center_x = 34.706
+center_y = 34.975
+center_z = 54.049
+
+size_x = 70
+size_y = 70
+size_z = 70
+
+exhaustiveness = 8
+num_modes = 9
+energy_range = 4
+```
+---
+
+### Step 6: Docking Execution (AutoDock Vina)
 
 ```bash
 C:\CVina\vina.exe --config config_1NIW.txt --out output1NIW.pdbqt
@@ -152,7 +182,7 @@ png images/docking_XXXX.png, dpi=300
 
 ---
 
-### Step 7: Complex Creation
+### Step 7: Complex Creation (for PLIP Analysis)
 
 ```bash
 create complex_XXXX, protein_XXXX_clean or outputXXXX_0001
@@ -163,8 +193,14 @@ save complexes/complex_XXXX.pdb
 
 ### Step 8: Interaction Analysis (PLIP)
 
+Access:
 [https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index](https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index)
 
+Upload: complex_XXXX.pdb
+Output:
+1. Hydrogen bonds
+2. Hydrophobic interactions
+3. Salt bridges
 ---
 
 ## 📊 Results
@@ -193,9 +229,10 @@ save complexes/complex_XXXX.pdb
 
 ##  Analysis
 
-* Best affinity: 1NIW
-* Most stable: 1NIW
-* Strongest interaction network: 2R4S
+* Best binding affinity: 1NIW
+* Highest interaction density: 2R4S
+* Most stable docking: 1NIW
+* Least reliable: 1GQ4 (high RMSD)
 
 ```
 1NIW > 2R4R > 2R4S > 1GQ4
@@ -205,11 +242,16 @@ save complexes/complex_XXXX.pdb
 
 ##  Discussion
 
-* 1NIW: Hydrophobic + salt bridge stabilization
-* 2R4S: Strong hydrogen bonding + electrostatic interactions
-* 2R4R: Balanced interactions
-* 1GQ4: Weak binding with instability
-
+* 1NIW
+1. Strong hydrophobic interactions and salt bridge
+2. Stable and energetically favorable
+* 2R4S
+1. Highest hydrogen bonding and electrostatic interactions
+2. Strong interaction network
+* 2R4R
+1. Balanced hydrogen bonding and hydrophobic interactions
+* 1GQ4
+1. Strong hydrogen bonding but weak affinity and high variability
 ---
 
 ## 🧪 Drug-Likeness
@@ -217,7 +259,7 @@ save complexes/complex_XXXX.pdb
 | Protein | Status     |
 | ------- | ---------- |
 | 1NIW    | Acceptable |
-| Others  | Poor       |
+| Others(1GQ4,2R4R,2R4S)  | Poor       |
 
 ---
 
