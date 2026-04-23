@@ -1,0 +1,14 @@
+receptor = protein_1NIW_clean.pdbqt
+ligand = ligand_marrubiin.pdbqt
+
+center_x = 34.706
+center_y = 34.975
+center_z = 54.049
+
+size_x = 70
+size_y = 70
+size_z = 70
+
+exhaustiveness = 8
+num_modes = 9
+energy_range = 4
